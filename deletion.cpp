@@ -1,25 +1,33 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+
 int main()
 {
     int n;
-    cout<<"enter array size"<<endl;
-    cin>>n;
+    printf("Enter array size:\n");
+    scanf("%d", &n);
+
     int ar[n];
-    cout<<"enter array elements"<<endl;
-    for(int i=0;i<n;i++)
+    printf("Enter array elements:\n");
+    for (int i = 0; i < n; i++)
     {
-        cin>>ar[i];
+        scanf("%d", &ar[i]);
     }
+
     int pos;
-    cout<<"enter value to be deleted at the position"<<endl;
-    cin>>pos;
-    for(int i=pos;i<=n-1;i++)
+    printf("Enter position of the value to be deleted:\n");
+    scanf("%d", &pos);
+
+    for (int i = pos; i <= n - 1; i++)
     {
-        ar[i]=ar[i+1];
+        ar[i] = ar[i + 1];
     }
-    for(int i=0;i<n-1;i++)
-    cout<<ar[i]<<"\t";
-    cout<<endl;
+
+    printf("Array after deletion:\n");
+    for (int i = 0; i < n - 1; i++)
+    {
+        printf("%d\t", ar[i]);
+    }
+
+    printf("\n");
     return 0;
 }
